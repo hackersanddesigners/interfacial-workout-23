@@ -1,0 +1,72 @@
+path: content/data/01/1
+
+----
+
+content: * O > Go to previous content
+* P > Go to next content
+* A > Move Left
+* Q > Move Right
+* W > Move Down
+* S > Move Up
+* U > Zoom In
+* Space Bar > Zoom Out
+* I > Decrease block width
+* E > Increase block width
+* Y > Increase letter spacing
+* R > Decrease letter spacing
+* N > Change font (random in an array of fonts)
+* B > Change color (random)
+* M > Rotate Clockwise
+* L > Rotate Counterclockwise
+* T > Generate PDF
+
+----
+
+index: 1
+
+----
+
+zoom: 0.8999999999999999
+
+----
+
+xPos: 2.3999999999999986
+
+----
+
+yPos: 3.9999999999999996
+
+----
+
+wordSpace: 0
+
+----
+
+blockSize: 6
+
+----
+
+filesNb: 1
+
+----
+
+font: gulax
+
+----
+
+color: #F5351E
+
+----
+
+rotation: 15
+
+----
+
+strokeWidth: 0
+
+----
+
+opacity: 100
+
+----
+

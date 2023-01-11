@@ -1,0 +1,24 @@
+
+
+What's up with the colors? Websafe #FFF = white?
+
+
+CLEAN UP ALL data.text files! There's stuff at the far bottom sometimes that makes the content disappear. Take out the bottom bit, should be fine. 
+
+
+
+EERST IN DE FOLDER NAVIGEREN VOOR JE NPM INSTALL DOET!
+Dus niet git repo, maar een van de subrepos
+
+RUN NPM AUDIT 
+
+WERKT ALLEEN IN CHROME
+
+REMOVE FIRST LINE FROM config.js
+
+var favicon = require('serve-favicon');
+
+
+ADD TO THE END OF SERVER.JS 
+
+
