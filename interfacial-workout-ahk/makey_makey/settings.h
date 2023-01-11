@@ -17,21 +17,21 @@
 int keyCodes[NUM_INPUTS] = {
   // top side of the makey makey board
  
-  'd',      // up arrow pad
-  'f',    // down arrow pad
-  'g',    // left arrow pad
-  'h',   // right arrow pad
+  's',      // up arrow pad
+  'w',    // down arrow pad
+  'a',    // left arrow pad
+  'q',   // right arrow pad
   ' ',               // space button pad
   MOUSE_LEFT,        // click button pad
   
   // female header on the back left side
   
-  'a',                // pin D5
-  'z',                // pin D4
-  'e',                // pin D3
-  'r',                // pin D2
-  't',                // pin D1
-  'y',                // pin D0
+  'u',                // pin D5
+  'p',                // pin D4
+  'n',                // pin D3
+  'm',                // pin D2
+  'i',                // pin D1
+  'e',                // pin D0
   
   // female header on the back right side
   
