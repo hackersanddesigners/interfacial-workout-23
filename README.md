@@ -85,6 +85,20 @@ Now open a window in Chrome browser and go to [http://localhost:1337](http://loc
 
 To stop the server: type **ctrl + c** in terminal
 
+## Preparing files
+
+Follow the files structure and expand. The logic is: 
+
+01, 02, 03 and so on are pages, within each page you can prepare folders with content (e.g. 1, 2, 3, 4, and so on). Each block folder can contain one piece of text OR one image. Check that the path in the data.txt file is correct and the link to the image follows the folder structure path or they won't show up. 
+
+Index number in the data.txt file should point to the block number (e.g. page 01, block 3 has index: 3). 
+
+### Adding more content
+
+You can make more content blocks by creating a new folder (keep the numbering structure in tact), and then copying the data.txt file from one of the previous blocks in that same folder. Then change the paths accordingly. 
+
+NOTE: copy-pasting whole folders often leads to errorrrrrrs. 
+
 ## Using the PJ machine
 
 The PJ Machine has some functions include by default you can use. All functions can be fired by a keypress. The ones marked **bold** will be used for the interfacial workout today.
