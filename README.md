@@ -34,13 +34,17 @@ You need to install *Node* first, available here: [node.js](https://nodejs.org/)
 
 You need to have Chrome browser installed: [https://chromeenterprise.google](https://chromeenterprise.google)
 
+You might have to install some additional things, like xcode developer tools, but you will be prompted for that if necessary when running npm install later.
+
 ### Install process
 
 Open a terminal window to execute commands and install the programm.
 
 - macOS: go to Applications -> Utilities -> Terminal
 - Linux: use a terminal app such as Terminal or Konsole
-- Windows: open Cygwin
+- Windows 10 & 11: command promt (PowerShell or Windows Terminal): 
+	- open Command Prompt by typing "command prompt" or "cmd" in the start menu. It will open a new window
+	- for windows command "dir" replaces what ls (list) does in Shell. A little guide [here](https://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/) and [here](
 
 In your terminal, navigate to the pj-machine folder with your terminal using the `cd` command (cd stands for *change directory)*:
 
@@ -54,12 +58,16 @@ If you type a list command (ls) and then ENTER, you should see the same files li
 ```
 ls
 ```
+*On windows: if ls doesnt work, try "dir" instead*
 
 Now you need to install other things we need (dependencies) by typing the following command and hitting ENTER. This process may take up to 5 minutes:
 
 ```
 npm install
 ```  
+ 
+You might get some errors, if it says something about installing xcode, install that. Most other errors can be ignored and you can try running the PJ machine. 
+
  
 ## Run PJ Machine
 
