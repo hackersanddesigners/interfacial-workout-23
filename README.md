@@ -85,6 +85,27 @@ Now open a window in Chrome browser and go to [http://localhost:1337](http://loc
 
 To stop the server: type **ctrl + c** in terminal
 
+## Using the PJ machine
+
+The PJ Machine has some functions include by default you can use. All functions can be fired by a keypress. The ones marked **bold** will be used for the interfacial workout today.
+
+* O > Go to previous content
+* **P > Go to next content > pin D4** 
+* **A > Move Left > arrow**
+* **Q > Move Right > arrow**
+* **W > Move Down > arrow**
+* **S > Move Up > arrow**
+* **U > Zoom In > pin D5**
+* **Space > Zoom Out > space**
+* **I > Decrease block width > pin D1**
+* **E > Increase block width > pin D0**
+* Y > Increase letter spacing > pin A5
+* R > Decrease letter spacing > pin A4
+* **N > Change font > pin D3**
+* B > Change color (random) > n/a
+* **M > Rotate Clockwise > pin D2**
+* L > Rotate Counterclockwise > n/a
+* T > Generate PDF > pin A3
 
 
 ## Remap Makey Makey to match PJ machine hotkeys
@@ -109,6 +130,8 @@ We will play with 9 design properties during this workshop:
 * group 6: rotate | **m** | makey pin D2
 * group 7: decrease block width | **i** | makey pin D1
 * group 8: increase block width | **e** | makey pin D0
+* group 9: increase letter spacing | **y** | makey pin A5
+* group 10: decrease letter spacing | **r** | makey pin A4
 
 **To generate a PDF of the page for print, press the letter T on your computer keyboard**
 

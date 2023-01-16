@@ -2,7 +2,90 @@ path: content/data/05/1
 
 ----
 
-content: is this on purpose?
+content: ![alt](/data/05/1/yousef.jpeg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -80,15 +163,15 @@ index: 1
 
 ----
 
-zoom: 0.8999999999999999
+zoom: 1.1500000000000001
 
 ----
 
-xPos: 2.3999999999999986
+xPos: 2.800000000000001
 
 ----
 
-yPos: 3.9999999999999996
+yPos: 1.27
 
 ----
 
@@ -96,7 +179,7 @@ wordSpace: 0
 
 ----
 
-blockSize: 3.5
+blockSize: 2.5
 
 ----
 
@@ -104,7 +187,7 @@ filesNb: 1
 
 ----
 
-font: gulax
+font: trickster
 
 ----
 
@@ -112,7 +195,7 @@ color: #F5351E
 
 ----
 
-rotation: 15
+rotation: 140
 
 ----
 

@@ -1,0 +1,20 @@
+content: 
+
+----
+
+zoom: NaN
+
+----
+
+blockSize: NaN
+
+----
+
+strokeWidth: NaN
+
+----
+
+rotation: NaN
+
+----
+

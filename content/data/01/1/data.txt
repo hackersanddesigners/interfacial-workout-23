@@ -2,23 +2,248 @@ path: content/data/01/1
 
 ----
 
-content: * O > Go to previous content
-* P > Go to next content
-* A > Move Left
-* Q > Move Right
-* W > Move Down
-* S > Move Up
-* U > Zoom In
-* Space Bar > Zoom Out
-* I > Decrease block width
-* E > Increase block width
-* Y > Increase letter spacing
-* R > Decrease letter spacing
-* N > Change font (random in an array of fonts)
-* B > Change color (random)
-* M > Rotate Clockwise
-* L > Rotate Counterclockwise
-* T > Generate PDF
+content: ![alt](/data/01/1/Mariska.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2280,7 +2505,7 @@ index: 1
 
 ----
 
-zoom: 0.7999999999999998
+zoom: 0.6999999999999997
 
 ----
 
@@ -2288,11 +2513,11 @@ xPos: 1.1999999999999986
 
 ----
 
-yPos: 5.6000000000000005
+yPos: 6.400000000000001
 
 ----
 
-wordSpace: 0
+wordSpace: 3
 
 ----
 

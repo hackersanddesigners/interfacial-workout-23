@@ -17,27 +17,27 @@
 int keyCodes[NUM_INPUTS] = {
   // top side of the makey makey board
  
-  's',      // up arrow pad
-  'w',    // down arrow pad
-  'a',    // left arrow pad
-  'q',   // right arrow pad
-  ' ',               // space button pad
-  MOUSE_LEFT,        // click button pad
+  's',      // up arrow pad | up
+  'w',    // down arrow pad | down
+  'a',    // left arrow pad | left
+  'q',   // right arrow pad | right
+  ' ',               // space button pad | zoom out
+  MOUSE_LEFT,        // click button pad | not used
   
   // female header on the back left side
   
-  'u',                // pin D5
-  'p',                // pin D4
-  'n',                // pin D3
-  'm',                // pin D2
-  'i',                // pin D1
-  'e',                // pin D0
+  'u',                // pin D5 | zoom in 
+  'p',                // pin D4 | next block
+  'n',                // pin D3 | change font
+  'm',                // pin D2 | rotate clockwise
+  'i',                // pin D1 | decrease block width
+  'e',                // pin D0 | increase block width
   
   // female header on the back right side
   
-  'u',         // pin A5
-  'i',        // pin A4
-  'o',        // pin A3
+  'y',        // pin A5  //increase letter spacing
+  'r',        // pin A4   //decrease letter spacing
+  't',        // pin A3   //generate pdf
   'p',        // pin A2
   'q',        // pin A1
   's'         // pin A0
