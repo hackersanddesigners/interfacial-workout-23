@@ -1,8 +1,158 @@
-path: content/data/02/2
+path: content/data/08/3
 
 ----
 
-content: ![alt](/data/02/2/Marijn.jpeg)
+content: ![alt](/data/08/3/janneke4.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1885,27 +2035,27 @@ content: ![alt](/data/02/2/Marijn.jpeg)
 
 ----
 
-index: 2
+index: 3
 
 ----
 
-zoom: 1.0999999999999968
+zoom: 2.1500000000000004
 
 ----
 
-xPos: -1.27675647831893e-15
+xPos: -2.8000000000000016
 
 ----
 
-yPos: 3.400000000000001
+yPos: 4.000000000000002
 
 ----
 
-wordSpace: 15
+wordSpace: -21
 
 ----
 
-blockSize: 7.5
+blockSize: 5
 
 ----
 
@@ -1913,7 +2063,7 @@ filesNb: 1
 
 ----
 
-font: gulax
+font: resistance
 
 ----
 
@@ -1921,7 +2071,7 @@ color: #F5351E
 
 ----
 
-rotation: 240
+rotation: 360
 
 ----
 
@@ -1929,7 +2079,7 @@ strokeWidth: 0
 
 ----
 
-opacity: 60
+opacity: 100
 
 ----
 
