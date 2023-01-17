@@ -127,7 +127,7 @@ The PJ Machine has some functions include by default you can use. All functions 
 * B > Change color (random) > n/a
 * **M > Rotate Clockwise > pin D2**
 * L > Rotate Counterclockwise > n/a
-* T > Generate PDF > pin A3
+* **T > Generate PDF > pin A3**
 
 
 ## Remap Makey Makey to match PJ machine hotkeys
