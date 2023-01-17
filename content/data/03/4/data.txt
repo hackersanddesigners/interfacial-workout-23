@@ -9160,6 +9160,20 @@ Een experiment om het experiment is alleen een experiment. Is het besluit van he
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ----
 
 index: 4
@@ -9174,7 +9188,7 @@ xPos: 1
 
 ----
 
-yPos: 1.4
+yPos: 1.5999999999999999
 
 ----
 
