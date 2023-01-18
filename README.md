@@ -119,8 +119,8 @@ The PJ Machine has some functions include by default you can use. All functions 
 * **S > Move Up > arrow**
 * **U > Zoom In > pin D5**
 * **Space > Zoom Out > space**
-* **I > Decrease block width > pin D1**
-* **E > Increase block width > pin D0**
+* **I > Increase block width > pin D0**
+* **E > Decrease block width > pin D1**
 * Y > Increase letter spacing > pin A5
 * R > Decrease letter spacing > pin A4
 * **N > Change font > pin D3**
@@ -141,8 +141,11 @@ Follow this tutorial to reprogram the makey makey to use the right keys:
 
 *NOTE: Instead of using the code provided in the tutorial you have to use the .ino and related .h files provided in this repository.*
 
+The code maps the makey makey pins as follows: 
 
-We will play with 9 design properties during this workshop: 
+![makey makey pinouts mapped](images/makeymap.png)
+
+We will play with these 9 design properties during this workshop: 
 
 * group 1: move left & right | **a** and **q** | makey left and right arrow
 * group 2: move up & down | **s** and **w** | makey up and down arrow
@@ -150,8 +153,8 @@ We will play with 9 design properties during this workshop:
 * group 4: select next block | **p** | makey pin D4
 * group 5: select next font | **n** | makey pin D3
 * group 6: rotate | **m** | makey pin D2
-* group 7: decrease block width | **i** | makey pin D1
-* group 8: increase block width | **e** | makey pin D0
+* group 7: decrease block width | **e** | makey pin D1
+* group 8: increase block width | **i** | makey pin D0
 * group 9: increase letter spacing | **y** | makey pin A5
 * group 10: decrease letter spacing | **r** | makey pin A4
 
@@ -160,6 +163,14 @@ We will play with 9 design properties during this workshop:
 ## Bonus: use an Arduino Leonardo as Makey Makey
 
 [https://www.instructables.com/id/DIY-Makey-Makey-With-Arduino-Leonardo/](https://www.instructables.com/id/DIY-Makey-Makey-With-Arduino-Leonardo/)
+
+## Making your own buttons
+
+Anything conductive can be used to create on/off switches to activate the key presses mentioned above. Think: aluminum foil, metal objects, water, fruit & veg, human bodies. Remember that a "closed" circuit is a working circuit: electricity can flow. An "open" or interrupted circuit doesn't work becauce electricity cannot flow. 
+
+For reference this image from the makey makey: the apple is connected to a pin on the makey. A person is connected to the "ground" or minus pin. The circuit is open (off) until the person touches the apple. Touching the apple closes the circuit, and activates the switch. 
+
+![simple drawing of a makey makey touch activated switch with an apple](images/makey_circuit.jpg)
 
 
 ## Trouble shooting

@@ -30,8 +30,8 @@ int keyCodes[NUM_INPUTS] = {
   'p',                // pin D4 | next block
   'n',                // pin D3 | change font
   'm',                // pin D2 | rotate clockwise
-  'i',                // pin D1 | decrease block width
-  'e',                // pin D0 | increase block width
+  'e',                // pin D1 | decrease block width
+  'i',                // pin D0 | increase block width
   
   // female header on the back right side
   
