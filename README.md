@@ -233,3 +233,12 @@ strokeWidth: 0
 opacity: 100
 
 ----
+
+## Project bugs and wishlist
+
+* the pdfs seem to take a different crop compared to what is designed, need to look into this
+* design not-makey board to DIY! see also [this project](https://www.youtube.com/watch?v=QCxbU6q3SYM&t=237s) and [this project](https://www.instructables.com/DIY-Makey-Makey-With-Arduino-Leonardo/) 
+* debug the code so the newlines don't get saved in the data.txt files
+* add sound effects > musical design interface :) 
+* check the install process for windows 10 and windows 11
+* include steps for install of xcode 
