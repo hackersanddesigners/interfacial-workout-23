@@ -121,8 +121,8 @@ The PJ Machine has some functions include by default you can use. All functions 
 * **Space > Zoom Out > space**
 * **I > Increase block width > pin D0**
 * **E > Decrease block width > pin D1**
-* Y > Increase letter spacing > pin A5
-* R > Decrease letter spacing > pin A4
+* **Y > Increase letter spacing > pin A5**
+* **R > Decrease letter spacing > pin A4**
 * **N > Change font > pin D3**
 * B > Change color (random) > n/a
 * **M > Rotate Clockwise > pin D2**
