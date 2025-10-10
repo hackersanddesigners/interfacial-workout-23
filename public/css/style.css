@@ -460,7 +460,7 @@ body[data-page="print"] .content-wrapper {
     body[data-page="print"] .content-wrapper .page .page-wrapper {
       margin: 0; }
       body[data-page="print"] .content-wrapper .page .page-wrapper .content.active-pj {
-        border: none; }
+        outline: none; }
 
 body[data-page="pdf"] {
   margin: 2em;
@@ -498,9 +498,9 @@ body[data-page="pdf"] {
       cursor: pointer;
       word-wrap: break-word; }
       .content-wrapper .page .page-wrapper .content.active-pj {
-        border: 2px solid blue; }
+        outline: 2px dashed blue; }
       .content-wrapper .page .page-wrapper .content.debug {
-        border: 2px solid red; }
+        outline: 2px solid red; }
 
 /******************
   Mixins
