@@ -1,27 +1,62 @@
 (function init(){
+	var handledKeys = {
+		'p': true,
+		'o': true,
+		'q': true,
+		'a': true,
+		'w': true,
+		's': true,
+		'u': true,
+		' ': true,
+		'i': true,
+		'e': true,
+		'y': true,
+		'r': true,
+		't': true,
+		'n': true,
+		'b': true,
+		'm': true,
+		'l': true,
+		'h': true,
+		'j': true,
+		'c': true,
+		'v': true
+	};
 
 	// KEY PRESS EVENTS
-	$(document).on('keypress', function(e){
-		var code = e.keyCode;
-		console.log(code);
+	$(document).on('keydown', function(e){
+		var key = e.key;
+
+		if(!key){
+			var fallbackCode = e.which || e.keyCode;
+			// fallback for legacy browsers that don't expose e.key
+			key = fallbackCode ? String.fromCharCode(fallbackCode) : '';
+		}
+
+		key = key.toLowerCase();
+		console.log(key);
+
+		var isHandledKey = !!handledKeys[key];
 
 		// CALL FUNCTION YOU NEED HERE 
 		// CHANGE THE KEYPRESS CODE IN EACH FUNCTION
-		changeBlock(code);
-		moveBlock(code);
-		zoomBlock(code);
-		wordSpacing(code);
-		changeBlockSize(code);
-		changeFont(code);
-		//changeColor(code);
-		rotateBlock(code);
-		textStrokeWidth(code);
-		changeOpacity(code);
+		changeBlock(key);
+		moveBlock(key);
+		zoomBlock(key);
+		wordSpacing(key);
+		changeBlockSize(key);
+		changeFont(key);
+		//changeColor(key);
+		rotateBlock(key);
+		textStrokeWidth(key);
+		changeOpacity(key);
 		
-		generatePDF(code);
+		generatePDF(key);
 
 		
-		e.preventDefault(); // prevent the default action (scroll / move caret)
+		if(isHandledKey){
+			e.preventDefault(); // prevent the default action (scroll / move caret)
+		}
 	});
 
 
@@ -30,17 +65,17 @@
 
 
 // PJ EVENTS FUNCTION
-	function changeBlock(code){
+	function changeBlock(key){
 		// press "p" to go to next block, press "o" to do to previous block
-		var nextKey = 112;
-		var prevKey = 111; 
+		var nextKey = 'p';
+		var prevKey = 'o'; 
 
 		var direction ; 
-		if(code == nextKey){
+		if(key == nextKey){
 			direction = "next";
 		}
 
-		if(code == prevKey){
+		if(key == prevKey){
 			direction = "prev";
 		}
 
@@ -49,104 +84,104 @@
 
 	}
 
-	function moveBlock(code){
+	function moveBlock(key){
 
 		//press "q" to move image on the right
-		var right = 113;
+		var right = 'q';
 		//press "a" to move image on the left
-		var left = 97; 
+		var left = 'a'; 
 		//press "w" to move image down
-		var down = 119;
+		var down = 'w';
 		//press "s" to move image up
-		var up = 115;
+		var up = 's';
 
 		var direction; 
-		if(code == right){
+		if(key == right){
 			direction = "right";
 		}
-		if(code == left){
+		if(key == left){
 			direction = "left";
 		}
-		if(code == up){
+		if(key == up){
 			direction = "up";
 		}
-		if(code == down){
+		if(key == down){
 			direction = "down";
 		}
 		
-		if(code == right || code == left ||code == up ||code == down ){
+		if(key == right || key == left ||key == up ||key == down ){
 			sendEvent('moveBlock', direction);
 		}
 	}
 
-	function zoomBlock(code){
+	function zoomBlock(key){
 		//zoomIn press "u"
-		var zoomInKey = 117; 
+		var zoomInKey = 'u'; 
 		//zoomOut press "space"
-		var zoomOutKey = 32; 
+		var zoomOutKey = ' '; 
 		var zoom; 
 
-		if(code == zoomInKey){
+		if(key == zoomInKey){
 			zoom = "zoomin";
 		}
 		
-		if(code == zoomOutKey){
+		if(key == zoomOutKey){
 			zoom = "zoomout";
 		}
-		if(code == zoomInKey || code == zoomOutKey){
+		if(key == zoomInKey || key == zoomOutKey){
 			sendEvent('zoomBlock', zoom);
 		}
 	}
 
-	function changeBlockSize(code){
+	function changeBlockSize(key){
 		// press 'i' to make Block Size smaller
-		var decreaseSize = 105;
+		var decreaseSize = 'i';
 		// press 'e' to make Block Size larger
-		var increaseSize = 101;
+		var increaseSize = 'e';
 		var direction;
 
-		if(code == decreaseSize){
+		if(key == decreaseSize){
 			direction = "decreaseSize";
 		}
 		
-		if(code == increaseSize){
+		if(key == increaseSize){
 			direction = "increaseSize";
 		}
 
-		if(code == decreaseSize || code == increaseSize){
+		if(key == decreaseSize || key == increaseSize){
 			sendEvent('changeBlockSize', direction);
 		}
 	}
 
-	function wordSpacing(code){
+	function wordSpacing(key){
 
 		//press "y" to add space between each words
-		var increaseKey = 121;
+		var increaseKey = 'y';
 		//press "r" to decrease space between each words
-		var decreaseKey = 114;
+		var decreaseKey = 'r';
 		var direction;
 
-		if(code == decreaseKey){
+		if(key == decreaseKey){
 			direction = "decreaseSpacing";
 		}
 		
-		if(code == increaseKey){
+		if(key == increaseKey){
 			direction = "increaseSpacing";
 		}
 
-		if(code == decreaseKey || code == increaseKey){
+		if(key == decreaseKey || key == increaseKey){
 			sendEvent('changeWordSpacing', direction);
 
 		}
 	}
 
-	function generatePDF(code){
+	function generatePDF(key){
 
 		// press "t" to generate pdf
-		var pdf = 116;
+		var pdf = 't';
 		var currentUrl = window.location.href ; 
 
-		if(code == pdf){
+		if(key == pdf){
 			socket.emit('generate', {
 				"currentUrl": currentUrl,
 				"currentProject" : currentProject
@@ -158,32 +193,32 @@
 
 
 // Additional functions you could use
-	function changeFont(code){
+	function changeFont(key){
 
 		var fonts = ["blocus", "bluu", "gulax", "hyperscrypt", "resistance", "roboto", "solidemirage", "sportinggrotesque", "trickster"];
 		
 		// press "n" to shuffle fonts
-		var shuffle = 110;
+		var shuffle = 'n';
 		var randomFont;
 
-		if(code == shuffle){
+		if(key == shuffle){
 			randomFont = fonts[Math.floor(Math.random() * fonts.length)];
 		
 			sendEvent('changeFont', randomFont);
 		}
 	}
 
-	function changeColor(code){
+	function changeColor(key){
 
 		// press "b" to shuffle fonts
-		var shuffle = 98;
+		var shuffle = 'b';
 
 		// variable for generating random colors
 		var letters = '0123456789ABCDEF';
 	  var color = '#';
 	  
 
-	  if(code == shuffle){
+	  if(key == shuffle){
 	  	for (var i = 0; i < 6; i++) {
 	    	color += letters[Math.floor(Math.random() * 16)];
 	  	}
@@ -193,69 +228,69 @@
 
 	}
 
-	function rotateBlock(code){
+	function rotateBlock(key){
 
 		//press "m" to rotate clockwise
-		var rotateRight = 109;
+		var rotateRight = 'm';
 		//press "l" to rotate counterclockwise
-		var rotateLeft = 108;
+		var rotateLeft = 'l';
 		var direction;
 
-		if(code == rotateRight){
+		if(key == rotateRight){
 			direction = "clockwise";
 		}
 		
-		if(code == rotateLeft){
+		if(key == rotateLeft){
 			direction = "counterclockwise";
 		}
 
-		if(code == rotateLeft || code == rotateRight){
+		if(key == rotateLeft || key == rotateRight){
 			sendEvent('rotateBlock', direction);
 
 		}
 
 	}
 
-	function textStrokeWidth(code){
+	function textStrokeWidth(key){
 
 		//press "h" to decrease text stroke width
-		var decreaseStroke = 104;
+		var decreaseStroke = 'h';
 		//press "j" to increase text stroke width
-		var increaseStroke = 106;
+		var increaseStroke = 'j';
 		var direction;
 
-		if(code == decreaseStroke){
+		if(key == decreaseStroke){
 			direction = "decrease";
 		}
 		
-		if(code == increaseStroke){
+		if(key == increaseStroke){
 			direction = "increase";
 		}
 
-		if(code == decreaseStroke || code == increaseStroke){
+		if(key == decreaseStroke || key == increaseStroke){
 			sendEvent('textStrokeWidth', direction);
 
 		}
 
 	}
 
-	function changeOpacity(code){
+	function changeOpacity(key){
 
 		//press "c" to decrease opacity
-		var decreaseOp = 99;
+		var decreaseOp = 'c';
 		//press "v" to increase opacity
-		var increaseOp = 118;
+		var increaseOp = 'v';
 		var direction;
 
-		if(code == decreaseOp){
+		if(key == decreaseOp){
 			direction = "decrease";
 		}
 		
-		if(code == increaseOp){
+		if(key == increaseOp){
 			direction = "increase";
 		}
 
-		if(code == decreaseOp || code == increaseOp){
+		if(key == decreaseOp || key == increaseOp){
 			sendEvent('changeOpacity', direction);
 
 		}
@@ -264,4 +299,3 @@
 
 
 	
-
