@@ -1,26 +1,26 @@
 (function init(){
 	var handledKeys = {
-		'p': true,
-		'o': true,
-		'q': true,
-		'a': true,
-		'w': true,
-		's': true,
-		'u': true,
-		' ': true,
-		'i': true,
-		'e': true,
-		'y': true,
-		'r': true,
-		't': true,
-		'n': true,
-		'b': true,
-		'm': true,
-		'l': true,
-		'h': true,
-		'j': true,
-		'c': true,
-		'v': true
+		'p': true, // Go to next content
+		'o': true, // Go to previous content
+		'q': true, // Move right
+		'a': true, // Move left
+		'w': true, // Move down
+		's': true, // Move up
+		'u': true, // Zoom in
+		' ': true, // Zoom out
+		'i': true, // Decrease block width
+		'e': true, // Increase block width
+		'y': true, // Increase word spacing
+		'r': true, // Decrease word spacing
+		't': true, // Generate PDF
+		'n': true, // Shuffle font
+		'b': true, // Shuffle color
+		'm': true, // Rotate clockwise
+		'l': true, // Rotate counterclockwise
+		'h': true, // Decrease stroke width
+		'j': true, // Increase stroke width
+		'c': true, // Decrease opacity
+		'v': true  // Increase opacity
 	};
 
 	// KEY PRESS EVENTS
