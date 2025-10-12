@@ -1,61 +1,50 @@
-// Include gulp
-var gulp = require('gulp');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
+const jsonSass = require('gulp-json-sass');
+const dartSass = require('sass');
+const gulpSass = require('gulp-sass')(dartSass);
 
-// Include Our Plugins
-var file = require('gulp-file');
-var concat = require('gulp-concat');
-var minifyCss = require('gulp-minify-css');
-var plumber = require('gulp-plumber');
-var rename = require('gulp-rename');
-var sass = require('gulp-sass');
-var jsonSass = require('gulp-json-sass');
+function handleError(err) {
+  console.log(err);
+  this.emit('end');
+}
 
-// var page  = require('content/page.js');
-
-// Compile Our Sass
-gulp.task('sass', function() {
+function compileSass() {
   return gulp.src('public/sass/*.scss')
-    .pipe(plumber({
-        errorHandler: function (err) {
-            console.log(err);
-            this.emit('end');
-        }
-    }))
-    .pipe(sass())
+    .pipe(plumber({ errorHandler: handleError }))
+    .pipe(gulpSass())
     .pipe(gulp.dest('public/css'));
-});
+}
 
-// gulp.task('hello', function(){
-//   return file('page.json', JSON.stringify(page))
-//     .pipe(gulp.dest('content'));
-// });
+function jsonToSass() {
+  return gulp.src('content/page.json')
+    .pipe(jsonSass())
+    .pipe(concat('settings.scss'))
+    .pipe(gulp.dest('public/sass'));
+}
 
-
-gulp.task('jsontosass', function(){
-  return gulp
-  .src('content/page.json')
-  .pipe(jsonSass())
-  .pipe(concat('settings.scss'))
-  .pipe(gulp.dest('public/sass'));
-});
-
-// Concatenate & Minify CSS
-gulp.task('css', function() {
-  return gulp.src('pubic/css/*.css')
+function cssTask() {
+  return gulp.src('public/css/*.css')
     .pipe(concat('all.css'))
     .pipe(gulp.dest('public/css'))
-    .pipe(minifyCss({compatibility: 'ie9'}))
+    .pipe(cleanCSS({ compatibility: 'ie9' }))
     .pipe(rename('all.min.css'))
     .pipe(gulp.dest('public/production'));
-});
+}
 
-// Watch Files For Changes
-gulp.task('watch', function() {
-  gulp.watch('content/page.json', ['jsontosass', 'sass', 'css']);
-  gulp.watch('public/sass/*.scss', ['sass', 'css']);
-});
+function watchFiles() {
+  gulp.watch('content/page.json', gulp.series(jsonToSass, compileSass, cssTask));
+  gulp.watch('public/sass/*.scss', gulp.series(compileSass, cssTask));
+}
 
-// Default Task
-gulp.task('default', ['jsontosass', 'sass', 'css', 'watch']);
-// gulp.task('default', ['jsontosass', 'watch']);
+const build = gulp.series(jsonToSass, compileSass, cssTask);
 
+exports.jsontosass = jsonToSass;
+exports.sass = compileSass;
+exports.css = cssTask;
+exports.watch = watchFiles;
+exports.build = build;
+exports.default = gulp.series(build, watchFiles);
