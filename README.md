@@ -127,23 +127,27 @@ NOTE: copy-pasting whole folders often leads to errorrrrrrs.
 The PJ Machine has some functions include by default you can use. All functions can be fired by a keypress. The ones marked **bold** will be used for the interfacial workout today.
 
 
-| PJ Machine key | PJ Machine function     | connection on Makey |
-|----------------|-------------------------|---------------------|
-| O              | Go to previous content  | unused for now      |
-| P              | Go to next content.     | Pin D4 / A          |
-| A              | Move Left               | Arrow Left          |
-| Q              | Move Right              | Arrow Right         |
-| W              | Move Down               | Arrow Down          |
-| S              | Move Up                 | Arrow Up            |
-| U              | Zoom in                 | Pin D5 / W          |
-| Space          | Zoom out                | space               |
-| I              | Increase block width    | Pin D0 / G          |
-| E              | Decrease block width    | Pin D1 / F          |
-| Y              | Increase letter spacing | Pin A5 / Mouse Up   |
-| R              | Decrease letter spacing | Pin A4 / Mouse Down |
-| N              | Change Font             | Pin D3 / S          |
-| M              | Rotate Clockwise        | Pin D2 / D          |
-| T              | Generate PDF            | Pin A3 / Mouse Left |
+| PJ Machine key | PJ Machine function      | connection on Makey  |
+|----------------|--------------------------|----------------------|
+| O              | Go to previous content   | Pin A5               |
+| P              | Go to next content.      | Pin D4 / A           |
+| A              | Move Left                | Arrow Left           |
+| Q              | Move Right               | Arrow Right          |
+| W              | Move Down                | Arrow Down           |
+| S              | Move Up                  | Arrow Up             |
+| U              | Zoom in                  | Pin D5 / W           |
+| Space          | Zoom out                 | space                |
+| I              | Increase block width     | Pin D0 / G           |
+| E              | Decrease block width     | Pin D1 / F           |
+| Y              | Increase letter spacing  | Pin A5 / Up Arrow    |
+| R              | Decrease letter spacing  | Pin A4 / Down Arrow  |
+| N              | Change Font              | Pin D3 / S           |
+| M              | Rotate Clockwise         | Pin D2 / D           |
+| T              | Generate PDF             | Pin A3 / Mouse Left  |
+| B              | shuffle color            | Pin A1 / Right Click |
+| L              | rotate counter clockwise | Pin A0 / Left Click  |
+
+![Iamge of the pin mapping of the MakeyMakey as above](images/Makey_mapping.png)
 
 ## Making your own buttons
 
