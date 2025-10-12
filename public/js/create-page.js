@@ -21,7 +21,7 @@ function makeFolderContent( projectData){
 			'top':projectData.yPos+'cm',
 			'letter-spacing': projectData.wordSpace +'px', 
 			'width': projectData.blockSize + 'cm',
-			'opacity': projectData.opacity + "%", 
+			'opacity': projectData.opacity, 
 	  })
   ;
 
