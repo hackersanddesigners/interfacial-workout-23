@@ -38,9 +38,9 @@ int keyCodes[NUM_INPUTS] = {
   'y',        // pin A5  //increase letter spacing
   'r',        // pin A4   //decrease letter spacing
   't',        // pin A3   //generate pdf
-  'p',        // pin A2
-  'q',        // pin A1
-  's'         // pin A0
+  'o',        // pin A2  // preuvious content
+  'b',        // pin A1 // shuffle color
+  'l'         // pin A0 // rotate counter clockwise
 };
 
 ///////////////////////////
