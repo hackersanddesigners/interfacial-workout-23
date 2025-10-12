@@ -24,6 +24,20 @@ And here's and interview we did with her in 2022:
 
 ## Installing the software 
 
+Since the workshop is short, we’ll test your circuits by opening a simple text editor (like Notepad on Windows or Notes on macOS) and checking if your letter appears when the circuit is closed.
+
+Instructions:
+	1.	Each group gets one or two letters. Collectively, we’ll build all the controls for the PJ Machine.
+	2.	Plug the Makey Makey into your computer with USB.
+	3.	Build your circuit using something conductive: foil, wire, graphite, copper tape, aluminium foil etc.
+	4.	Connect one side to the input assigned to your group (for example “A” or “B”), and the other to Earth (ground).
+	5.	Open a text editor.
+	6.	Test your circuit. To make it work, at least two people should be needed to touch or hold different parts of the circuit so the connection is completed through your bodies.
+	7.	If the letter appears, your circuit works!
+
+<details>
+<summary>If you want to run PJ Machine yourself anyway (click to expand)</summary>
+
 Download the repository **interfacial-workout-23**
 
 > [https://github.com/hackersanddesigners/interfacial-workout-23](https://github.com/hackersanddesigners/interfacial-workout-23)
@@ -92,12 +106,13 @@ Now open a window in Chrome browser and go to [http://localhost:1337](http://loc
 ### Stopping the server
 
 To stop the server: type **ctrl + c** in terminal
+</details>
 
 ## Preparing files
 
 Follow the files structure and expand. The logic is: 
 
-01, 02, 03 and so on are pages, within each page you can prepare folders with content (e.g. 1, 2, 3, 4, and so on). Each block folder can contain one piece of text OR one image. Check that the path in the data.txt file is correct and the link to the image follows the folder structure path or they won't show up. 
+01, 02, 03 and so on are pages, within each page you can prepare folders with content (e.g. 1, 2, 3, 4, and so on), these are called blocks. Each block folder can contain one piece of text OR one image. Check that the path in the data.txt file is correct and the link to the image follows the folder structure path or they won't show up. 
 
 Index number in the data.txt file should point to the block number (e.g. page 01, block 3 has index: 3). 
 
@@ -111,58 +126,24 @@ NOTE: copy-pasting whole folders often leads to errorrrrrrs.
 
 The PJ Machine has some functions include by default you can use. All functions can be fired by a keypress. The ones marked **bold** will be used for the interfacial workout today.
 
-* O > Go to previous content
-* **P > Go to next content > pin D4** 
-* **A > Move Left > arrow**
-* **Q > Move Right > arrow**
-* **W > Move Down > arrow**
-* **S > Move Up > arrow**
-* **U > Zoom In > pin D5**
-* **Space > Zoom Out > space**
-* **I > Increase block width > pin D0**
-* **E > Decrease block width > pin D1**
-* **Y > Increase letter spacing > pin A5**
-* **R > Decrease letter spacing > pin A4**
-* **N > Change font > pin D3**
-* B > Change color (random) > n/a
-* **M > Rotate Clockwise > pin D2**
-* L > Rotate Counterclockwise > n/a
-* **T > Generate PDF > pin A3**
 
-
-## Remap Makey Makey to match PJ machine hotkeys
-
-**Remapping using the Arduino environment**
-
-To make full use of the functions available in the PJ machine, you need to remap the pins of the Makey Makey. In this repository you can find a folder called *makey-makey* that has an .ino file and an .h file inside. 
-
-Follow this tutorial to reprogram the makey makey to use the right keys: 
-[https://learn.sparkfun.com/tutorials/makey-makey-advanced-guide](https://learn.sparkfun.com/tutorials/makey-makey-advanced-guide)
-
-*NOTE: Instead of using the code provided in the tutorial you have to use the .ino and related .h files provided in this repository.*
-
-The code maps the makey makey pins as follows: 
-
-![makey makey pinouts mapped](images/makeymap.png)
-
-We will play with these 9 design properties during this workshop: 
-
-* group 1: move left & right | **a** and **q** | makey left and right arrow
-* group 2: move up & down | **s** and **w** | makey up and down arrow
-* group 3: zoom out & zoom in | **space** and **u** | makey space pin and pin D5
-* group 4: select next block | **p** | makey pin D4
-* group 5: select next font | **n** | makey pin D3
-* group 6: rotate | **m** | makey pin D2
-* group 7: decrease block width | **e** | makey pin D1
-* group 8: increase block width | **i** | makey pin D0
-* group 9: increase letter spacing | **y** | makey pin A5
-* group 10: decrease letter spacing | **r** | makey pin A4
-
-**To generate a PDF of the page for print, press the letter T on your computer keyboard**
-
-## Bonus: use an Arduino Leonardo as Makey Makey
-
-[https://www.instructables.com/id/DIY-Makey-Makey-With-Arduino-Leonardo/](https://www.instructables.com/id/DIY-Makey-Makey-With-Arduino-Leonardo/)
+| PJ Machine key | PJ Machine function     | connection on Makey |
+|----------------|-------------------------|---------------------|
+| O              | Go to previous content  | unused for now      |
+| P              | Go to next content.     | Pin D4 / A          |
+| A              | Move Left               | Arrow Left          |
+| Q              | Move Right              | Arrow Right         |
+| W              | Move Down               | Arrow Down          |
+| S              | Move Up                 | Arrow Up            |
+| U              | Zoom in                 | Pin D5 / W          |
+| Space          | Zoom out                | space               |
+| I              | Increase block width    | Pin D0 / G          |
+| E              | Decrease block width    | Pin D1 / F          |
+| Y              | Increase letter spacing | Pin A5 / Mouse Up   |
+| R              | Decrease letter spacing | Pin A4 / Mouse Down |
+| N              | Change Font             | Pin D3 / S          |
+| M              | Rotate Clockwise        | Pin D2 / D          |
+| T              | Generate PDF            | Pin A3 / Mouse Left |
 
 ## Making your own buttons
 
