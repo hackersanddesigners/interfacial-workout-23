@@ -1,6 +1,6 @@
 var settings = {
 	
-	"title": "Interfacial Workout AHK Jan 2023", // Change project title
+	"title": "Interfacial Workout AHK October 2025", // Change project title
 
 /* ------- Features settings ------ */
 	
